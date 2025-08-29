@@ -32,21 +32,27 @@ document.addEventListener("DOMContentLoaded", () => {
     answerPage.classList.add("active");
 
     // trigger confetti
-    if (typeof confetti === "function") {
-      confetti({
-        particleCount: 150,
-        spread: 70,
-        origin: { y: 0.6 },
-      });
+    if (confetti && typeof confetti.start === "function") {
+      confetti.start();
     }
   });
 
-  // No button escape trick
-  noBtn.addEventListener("mouseover", () => {
-    const x = Math.random() * window.innerWidth * 0.6;
-    const y = Math.random() * window.innerHeight * 0.6;
+  // No button escape trick (desktop + mobile)
+  function moveNoButton() {
+    const padding = 50; // so it doesn't go off screen
+    const x = Math.random() * (window.innerWidth - padding);
+    const y = Math.random() * (window.innerHeight - padding);
     noBtn.style.position = "absolute";
     noBtn.style.left = `${x}px`;
     noBtn.style.top = `${y}px`;
+  }
+
+  // Desktop hover
+  noBtn.addEventListener("mouseover", moveNoButton);
+  // Mobile touch
+  noBtn.addEventListener("touchstart", (e) => {
+    e.preventDefault(); // prevent double activation
+    moveNoButton();
   });
 });
+
