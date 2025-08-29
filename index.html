@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Special Question 💖</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="proposal.jpg" type="image/jpeg" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Intro -->
+    <div class="page intro">
+      <h1>I have something important to share with you... 💕</h1>
+      <button class="nextBtn">Next ➡️</button>
+    </div>
+
+    <!-- Compliments -->
+    <div class="page compliments hidden">
+      <h2 class="compliment">You make me smile every single day 😊</h2>
+      <button class="nextBtn">Next ➡️</button>
+    </div>
+
+    <div class="page compliments hidden">
+      <h2 class="compliment">Life feels more beautiful with you in it 🌸</h2>
+      <button class="nextBtn">Next ➡️</button>
+    </div>
+
+    <div class="page compliments hidden">
+      <h2 class="compliment">
+        Every little moment with you means the world to me 🌍
+      </h2>
+      <button class="nextBtn">Next ➡️</button>
+    </div>
+
+    <!-- Proposal -->
+    <div class="page proposal hidden">
+      <h2>So... I just want to ask 💍</h2>
+      <h1>Will you be mine forever? ❤️</h1>
+      <div class="buttons">
+        <button id="yesBtn">Yes 💖</button>
+        <button id="noBtn">No ❌</button>
+      </div>
+    </div>
+
+    <!-- Answer -->
+    <div class="page answer hidden">
+      <h1>🎉 You just made me the happiest person alive! ❤️</h1>
+      <p>Our forever starts now 💕</p>
+      <canvas id="confetti-canvas"></canvas>
+    </div>
+
+    <!-- Floating Hearts -->
+    <div class="hearts"></div>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" src="bg-music.mp3" loop></audio>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        &copy; 2025 Al-Addin. All Rights Reserved.
+        <br />
+        Let's connect with developer -
+      </p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/addin.alt" target="_blank"
+          ><i class="fab fa-facebook"></i
+        ></a>
+        <a href="https://www.instagram.com/addin_alt/" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://linkedin.com/in/addin-alt" target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="confetti.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
